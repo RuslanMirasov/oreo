@@ -19,6 +19,25 @@ export const debounce = (func, delay) => {
   };
 };
 
+export const fixHeaderOnScroll = () => {
+  const header = document.querySelector('.header');
+  if (!header) return;
+
+  let isFixed = false;
+
+  const onScroll = () => {
+    const shouldBeFixed = window.scrollY > 0;
+
+    if (shouldBeFixed !== isFixed) {
+      header.classList.toggle('fix', shouldBeFixed);
+      isFixed = shouldBeFixed;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+};
+
 export const hidePreloader = () => {
   const preloader = document.querySelector('[data-preloader]');
   if (!preloader) return;

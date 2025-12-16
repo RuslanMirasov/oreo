@@ -1,6 +1,7 @@
-import { hidePreloader, initNavigationMenu } from './helpers.js';
+import { hidePreloader, initNavigationMenu, fixHeaderOnScroll } from './helpers.js';
 
 initNavigationMenu();
+fixHeaderOnScroll();
 
 setTimeout(() => {
   hidePreloader();

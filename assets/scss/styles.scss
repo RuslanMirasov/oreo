@@ -1,0 +1,19 @@
+:root {
+  --oreo: 'pluto-oreo', sans-serif;
+  --sans: 'pluto-sans-cond-regular', sans-serif;
+  --inter: 'inter-semibold', sans-serif;
+
+  --white: #ffffff;
+  --black: #323b42;
+  --blue: #0150e9;
+  --blue-dark: #0e14a5;
+  --blue-light: #4dbcec;
+  --red: #ff337a;
+  --invalid: #ec1d2f;
+  --grey: #adb1b3;
+}
+
+@import 'fonts';
+@import 'mixins';
+@import 'animations';
+@import 'reset';

@@ -23,17 +23,11 @@ export const hidePreloader = () => {
   const preloader = document.querySelector('[data-preloader]');
   if (!preloader) return;
 
-  setTimeout(() => {
-    preloader.classList.add('hidden');
-  }, 300);
-
-  setTimeout(() => {
-    document.body.classList.add('loaded');
-  }, 400);
+  document.body.classList.add('loaded');
 
   setTimeout(() => {
     preloader.remove();
-  }, 2000);
+  }, 1800);
 };
 
 export const initNavigationMenu = () => {

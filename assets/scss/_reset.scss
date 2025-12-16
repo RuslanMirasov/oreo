@@ -55,6 +55,7 @@ b,
 strong {
   color: inherit;
   font-family: var(--oreo);
+  font-weight: 900;
 }
 
 a {
@@ -98,9 +99,9 @@ menu {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0px 10px;
-  @media (max-width: 1240) {
+  @media (max-width: 1256px) {
     max-width: 100%;
-    padding: 0px 20px;
+    padding: 0px 28px;
   }
 }
 

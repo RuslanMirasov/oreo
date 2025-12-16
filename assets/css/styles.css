@@ -33,12 +33,23 @@
   transition: opacity 1.5s ease-in-out 0s, visibility 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0s;
   transform: scale(1);
 }
+@media (max-width: 767px), (orientation: portrait) {
+  .preloader {
+    background-size: 120svh 120svh;
+  }
+}
 .preloader img {
   position: relative;
   width: 36svw;
   height: 36svw;
   opacity: 1;
   animation: rotate 5s linear infinite;
+}
+@media (max-width: 767px), (orientation: portrait) {
+  .preloader img {
+    width: 36svh;
+    height: 36svh;
+  }
 }
 
 .loaded .preloader {

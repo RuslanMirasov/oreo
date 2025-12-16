@@ -12,6 +12,9 @@
   z-index: 9999;
   background: var(--blue) url('../img/svg/preloader-bg.svg') no-repeat center center;
   background-size: 120svw 120svw;
+  @media (max-width: 767px), (orientation: portrait) {
+    background-size: 120svh 120svh;
+  }
   pointer-events: all;
   opacity: 1;
   visibility: visible;
@@ -22,6 +25,10 @@
     position: relative;
     width: 36svw;
     height: 36svw;
+    @media (max-width: 767px), (orientation: portrait) {
+      width: 36svh;
+      height: 36svh;
+    }
     opacity: 1;
     animation: rotate 5s linear infinite;
   }

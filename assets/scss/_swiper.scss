@@ -1,0 +1,109 @@
+.swiper {
+  width: 100%;
+}
+
+.arrows {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  z-index: 10;
+
+  &.arrows--white {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    gap: 36px;
+    .arrow {
+      width: 48px;
+      height: 40px;
+      border-radius: 0px;
+
+      &[data-arrow-prev] {
+        background: url('../img/svg/arrow-prev-white.svg') no-repeat center center/cover;
+      }
+      &[data-arrow-next] {
+        background: url('../img/svg/arrow-next-white.svg') no-repeat center center/cover;
+      }
+    }
+    @media (max-width: 767px) {
+      right: 24px;
+      bottom: 24px;
+      gap: 16px;
+      .arrow {
+        width: 32px;
+        &[data-arrow-prev] {
+          background: url('../img/svg/arrow-prev-white-mobil.svg') no-repeat center center/cover;
+        }
+        &[data-arrow-next] {
+          background: url('../img/svg/arrow-next-white-mobil.svg') no-repeat center center/cover;
+        }
+      }
+    }
+  }
+}
+
+.arrow {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &[data-arrow-prev] {
+    background: url('../img/svg/arrow-prev.svg') no-repeat center center/cover;
+  }
+  &[data-arrow-next] {
+    background: url('../img/svg/arrow-next.svg') no-repeat center center/cover;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  position: relative;
+  width: 100% !important;
+  height: 12px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 0px !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  transform: translate(0%, 0%) !important;
+  gap: 6px;
+  overflow: visible;
+
+  .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 12px !important;
+    background: #0009a2;
+    transform: scale(1) translate(0px, 0px) !important;
+    left: 0px !important;
+    margin: 0 !important;
+    opacity: 1;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s, background 0.3s !important;
+
+    &.swiper-pagination-bullet-active {
+      background: #ff337a;
+      box-shadow: inset 4px 4px 10px #ff94c3;
+    }
+  }
+
+  &.big {
+    .swiper-pagination-bullet {
+      width: 52px !important;
+
+      &.swiper-pagination-bullet-active {
+        background: #44caf6;
+        box-shadow: inset 4px 4px 10px #00eaff;
+      }
+    }
+  }
+}

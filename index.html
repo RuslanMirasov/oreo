@@ -31,7 +31,7 @@
             <li><a href="./" class="menu__link">Продукты</a></li>
             <li><a href="./" class="menu__link">Рецепты</a></li>
             <li><a href="./" class="menu__link">Факты</a></li>
-            <li><a href="./" class="menu__link">Где купить</a></li>
+            <li><a href="#" class="menu__link" data-popup-open="brends">Где купить</a></li>
           </ul>
         </nav>
 
@@ -44,12 +44,107 @@
     <!--MAIN-->
     <main class="main" id="main">
       <!--SECTION HERO-->
-      <section class="section section--hero">
+      <section class="section section--hero" data-slider="hero">
         <div class="container">
-          <h1 class="title">Заголовок</h1>
+          <div class="swiper hero">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">1</div>
+              <div class="swiper-slide">1</div>
+              <div class="swiper-slide">1</div>
+            </div>
+          </div>
+          <div class="swiper-pagination big" data-pagination></div>
         </div>
       </section>
 
+      <!--SECTION FAQ-->
+      <section class="section section--faq" data-slider="faq" data-centered="true" data-effect="coverflow" data-initial-slide="2,1,0">
+        <div class="container">
+          <div class="swiper faq">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Где производится OREO?</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/1.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Еще один интересный факт</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/2.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Как правильно есть OREO?</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/3.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Подходит ли&nbsp;oreo для&nbsp;безлактозных диет?</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/4.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Содержит ЛИ OREO глютен?</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/5.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Где я могу купить разные вкусы Oreo?</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/6.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Интересный <br />факт</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/7.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <h3 class="faq-title">Содержит ли&nbsp;OREO орехи?</h3>
+                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <div class="faq-image">
+                    <img src="./assets/img/faq/8.webp" alt="Oreo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination" data-pagination></div>
+        </div>
+      </section>
+
+      <section class="section-title">
+        <h2 class="title">ГДЕ КУПИТЬ?</h2>
+      </section>
+
+      <!--SECTION BRENDS-->
       <section class="section section--brends">
         <div class="container">
           <ul class="brends">
@@ -195,15 +290,119 @@
     </footer>
 
     <!--POPUPS-->
-    <!-- <div class="backdrop" data-backdrop>
+    <div class="backdrop" data-backdrop>
       <div class="popup" data-popup>
-        <div class="popup-content" id="callback">
-          <button class="popup-close" data-popup-close></button>
-          <h2 class="title">ОБРАТНАЯ СВЯЗЬ</h2>
-          <p class="subtitle">Если у вас возникли вопросы <br />или&nbsp;предложения, пожалуйста, <br />свяжитесь с&nbsp;нами</p>
+        <!--Brends popup-->
+        <div class="popup-content" id="brends">
+          <button class="popup-close" data-popup-close>Закрыть</button>
+          <h2 class="title">ГДЕ КУПИТЬ?</h2>
+          <ul class="brends">
+            <li>
+              <a href="https://5ka.ru/search/?text=oreo" target="_blank">
+                <span class="brend-link-text">www.5ka.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/1.webp" alt="Пятёрочка" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.perekrestok.ru/cat/search?search=oreo" target="_blank">
+                <span class="brend-link-text">www.perekrestok.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/2.webp" alt="Перекрёсток" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.vprok.ru/catalog/search?text=oreo&utm_referrer=https%3A%2F%2Fwww.vprok.ru%2F" target="_blank">
+                <span class="brend-link-text">www.vprok.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/3.webp" alt="Впрок" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.utkonos.ru/search/oreo" target="_blank">
+                <span class="brend-link-text">www.utkonos.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/4.webp" alt="Утконос" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span class="brend-link-text">www.KUPER.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/5.webp" alt="Купер" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://samokat.ru/product/pechene-oreo-228-g?utm_source=product_share" target="_blank">
+                <span class="brend-link-text">www.SAMOKAT.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/6.webp" alt="Самокат" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://market.yandex.ru/search?text=oreo&hid=15714122&hid=16011677&hid=4951523&rs=eJwzylcy5WLJL0rNFzj26CGzEgsHgwALmGSAkBoMWQxVHIYmFhYW5maGDYwLD7F2MTJxMFaxcpzq28--gZHhE6MwB4MEgwKIqzB38UV2hcez1zH9ZYzYq2Pfy-Q3M95-KtMO11D7FUwgFQAJ5SAW&glfilter=7893318%3A14888761"
+                target="_blank"
+              >
+                <span class="brend-link-text">Market.yandex.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/7.webp" alt="Яндекс Маркет" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.ozon.ru/category/pechene-pryaniki-i-vafli-9381/oreo-135984965/?brand_was_predicted=true&category_was_predicted=true&deny_category_prediction=true&from_global=true&text=oreo"
+                target="_blank"
+              >
+                <span class="brend-link-text">www.ozon.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/8.webp" alt="Ozon" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://lenta.com/search/oreo/" target="_blank">
+                <span class="brend-link-text">www.lenta.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/9.webp" alt="Лента" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span class="brend-link-text">www.wildberries.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/10.webp" alt="Wildberries" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://magnit.ru/search?term=oreo" target="_blank">
+                <span class="brend-link-text">www.magnit.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/11.webp" alt="Магнит" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://lavka.yandex.ru/search?text=oreo" target="_blank">
+                <span class="brend-link-text">lavka.yandex.ru</span>
+                <div class="brend">
+                  <img src="./assets/img/brends/12.webp" alt="Яндекс Лавка" />
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/scripts.js" type="module" defer></script>

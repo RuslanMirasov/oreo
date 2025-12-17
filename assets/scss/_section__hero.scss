@@ -1,5 +1,15 @@
 .section--hero {
   padding-top: 100px;
   padding-bottom: 50px;
-  height: 60vh;
+}
+
+.hero {
+  width: 100%;
+  height: myclamp(248px, 644px, 1440px, 1440px);
+  background: var(--blue-dark);
+  border-radius: 50px;
+  margin-top: 20px;
+  @media (max-width: 767px) {
+    border-radius: 30px;
+  }
 }

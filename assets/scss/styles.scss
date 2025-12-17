@@ -8,6 +8,7 @@
   --blue: #0150e9;
   --blue-dark: #0e14a5;
   --blue-light: #4dbcec;
+  --blue-text: #0150ea;
   --red: #ff337a;
   --invalid: #ec1d2f;
   --grey: #adb1b3;
@@ -18,7 +19,11 @@
 @import 'mixins';
 @import 'animations';
 @import 'reset';
+@import 'swiper';
+@import 'typography';
 @import 'header';
 @import 'section__hero';
 @import 'section__brends';
+@import 'section__faq';
 @import 'footer';
+@import 'popup';

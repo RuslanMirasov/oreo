@@ -1,0 +1,134 @@
+.section--faq {
+  padding: 80px 0px;
+}
+
+.faq {
+  width: 322px;
+  height: 322px;
+  overflow: visible;
+  .swiper-wrapper {
+    transition-timing-function: ease-out;
+  }
+
+  &.is-stepping {
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+
+  .swiper-slide {
+    width: 322px;
+    height: 322px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s;
+
+    .inner {
+      width: 322px;
+      height: 322px;
+      background: var(--white);
+      border-radius: 25px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: transform 0.6s, opacity 0.6s;
+      transform: translate(0%, 0%) scale(0.5);
+      color: var(--blue-text);
+    }
+
+    &.swiper-slide-prev-prev,
+    &.swiper-slide-next-next,
+    &.swiper-slide-prev,
+    &.swiper-slide-next,
+    &.swiper-slide-active {
+      opacity: 1;
+      pointer-events: all;
+      .inner {
+        opacity: 1;
+      }
+    }
+
+    &.swiper-slide-active {
+      .inner {
+        transform: translate(0%, 0%) scale(1);
+        .faq-subtitle {
+          height: 100px;
+          opacity: 1;
+          transition: height 0.6s ease-out 0s, opacity 0.5s ease-out 0.5s;
+        }
+      }
+    }
+
+    &.swiper-slide-prev {
+      .inner {
+        transform: translate(-4%, 0%) scale(0.88);
+      }
+    }
+    &.swiper-slide-next {
+      .inner {
+        transform: translate(4%, 0%) scale(0.88);
+      }
+    }
+    &.swiper-slide-prev-prev {
+      .inner {
+        transform: translate(5%, 0%) scale(0.75);
+      }
+    }
+    &.swiper-slide-next-next {
+      .inner {
+        transform: translate(-5%, 0%) scale(0.75);
+      }
+    }
+    &.swiper-slide-after {
+      .inner {
+        transform: translate(-28.5%, 0%) scale(0.6);
+      }
+    }
+    &.swiper-slide-before {
+      .inner {
+        transform: translate(28.5%, 0%) scale(0.6);
+      }
+    }
+  }
+}
+
+.faq-title {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.faq-subtitle {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 20px;
+
+  transition: opacity 0.6s ease-out 0s, height 0.6s ease-out 0s;
+}
+
+.faq-image {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 288px;
+  height: 288px;
+  border-radius: 288px;
+  background: var(--blue);
+  border: 30px solid var(--blue-dark);
+  margin-top: 20px;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 370px;
+  }
+}

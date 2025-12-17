@@ -1,0 +1,15 @@
+.section-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(4deg, rgba(255, 51, 224, 0) 0%, rgba(255, 40, 173, 1) 100%),
+    linear-gradient(-8deg, rgba(255, 51, 122, 0) 0%, rgba(255, 174, 202, 1) 100%), var(--red);
+}
+
+.title {
+  display: block;
+  width: 100%;
+  font-size: myclamp(32px, 40px, 1440px, 1440px);
+  line-height: 1;
+}

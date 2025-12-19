@@ -2,63 +2,30 @@
   width: 100%;
 }
 
-.arrows {
-  display: inline-flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 10px;
-  z-index: 10;
-
-  &.arrows--white {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-    gap: 36px;
-    .arrow {
-      width: 48px;
-      height: 40px;
-      border-radius: 0px;
-
-      &[data-arrow-prev] {
-        background: url('../img/svg/arrow-prev-white.svg') no-repeat center center/cover;
-      }
-      &[data-arrow-next] {
-        background: url('../img/svg/arrow-next-white.svg') no-repeat center center/cover;
-      }
-    }
-    @media (max-width: 767px) {
-      right: 24px;
-      bottom: 24px;
-      gap: 16px;
-      .arrow {
-        width: 32px;
-        &[data-arrow-prev] {
-          background: url('../img/svg/arrow-prev-white-mobil.svg') no-repeat center center/cover;
-        }
-        &[data-arrow-next] {
-          background: url('../img/svg/arrow-next-white-mobil.svg') no-repeat center center/cover;
-        }
-      }
-    }
-  }
-}
-
 .arrow {
   display: block;
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 40px;
-  border-radius: 40px;
   overflow: hidden;
   cursor: pointer;
+  transition: 0.3s;
+  z-index: 4;
+  &.swiper-button-disabled {
+    opacity: 0.5;
+  }
 
   &[data-arrow-prev] {
-    background: url('../img/svg/arrow-prev.svg') no-repeat center center/cover;
+    left: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../img/svg/arrow-left.svg') no-repeat center center;
   }
   &[data-arrow-next] {
-    background: url('../img/svg/arrow-next.svg') no-repeat center center/cover;
+    right: 0px;
+    top: 50%;
+    transform: translate(50%, -50%);
+    background: url('../img/svg/arrow-right.svg') no-repeat center center;
   }
 }
 
@@ -77,6 +44,9 @@
   transform: translate(0%, 0%) !important;
   gap: 6px;
   overflow: visible;
+  @media (max-width: 767px) {
+    margin-top: 14px;
+  }
 
   .swiper-pagination-bullet {
     width: 12px !important;
@@ -103,6 +73,12 @@
       &.swiper-pagination-bullet-active {
         background: #44caf6;
         box-shadow: inset 4px 4px 10px #00eaff;
+      }
+
+      @media (max-width: 767px) {
+        width: 26px !important;
+        height: 6px !important;
+        box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
       }
     }
   }

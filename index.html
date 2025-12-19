@@ -48,13 +48,90 @@
         <div class="container">
           <div class="swiper hero">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">1</div>
-              <div class="swiper-slide">1</div>
-              <div class="swiper-slide">1</div>
+              <div class="swiper-slide" data-number="1">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                  <source src="./assets/video/1-mobil.mp4" type="video/mp4" media="(max-width: 659px)" />
+                  <source src="./assets/video/1.mp4" type="video/mp4" media="(min-width: 660px)" />
+                </video>
+              </div>
+              <div class="swiper-slide" data-number="2">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                  <source src="./assets/video/2-mobil.mp4" type="video/mp4" media="(max-width: 659px)" />
+                  <source src="./assets/video/2.mp4" type="video/mp4" media="(min-width: 660px)" />
+                </video>
+              </div>
+              <div class="swiper-slide" data-number="3">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                  <source src="./assets/video/3-mobil.mp4" type="video/mp4" media="(max-width: 659px)" />
+                  <source src="./assets/video/3.mp4" type="video/mp4" media="(min-width: 660px)" />
+                </video>
+              </div>
             </div>
           </div>
           <div class="swiper-pagination big" data-pagination></div>
         </div>
+      </section>
+
+      <!-- <br />
+          <br />
+
+          <div class="buttons full">
+            <button type="button" class="button" data-arrow-prev><img src="./assets/img/svg/arrow-prev.svg" alt="Oreo" /></button>
+            <button type="button" class="button button--white"><span>Играть</span></button>
+            <button type="button" class="button button--red"><span>Играть</span></button>
+            <button type="button" class="button"><span>Играть</span></button>
+            <button type="button" class="button"><span>Играть</span></button>
+            <button type="button" class="button" data-arrow-next><img src="./assets/img/svg/arrow-next.svg" alt="Oreo" /></button>
+          </div>
+          <div class="buttons full">
+            <button type="button" class="button big" data-popup-open="brends">
+              <span>Купить <span class="del-in-mobil">в</span> онлайн<span class="del-in-mobil">-магазинах</span></span>
+              <img src="./assets/img/svg/arrow.svg" alt="Oreo" />
+            </button>
+          </div> -->
+
+      <!--SECTION BANNER-->
+      <section class="section section--banner">
+        <div class="container">
+          <a href="#" class="banner">
+            <h2 class="title">РАСКРУТИ ВКУС <br />ВЕСЕЛЬЯ</h2>
+            <button type="button" class="button button--white"><span>Играть</span></button>
+          </a>
+        </div>
+      </section>
+
+      <!--SECTION PRODUCTS NAVIGATION-->
+      <section class="section section--products-navigation" data-slider data-slides-per-view="3,3,1" data-space-between="0,0,50">
+        <div class="container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#"><img src="./assets/img/products-nav-1.webp" alt="Oreo" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="./assets/img/products-nav-2.webp" alt="Oreo" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="./assets/img/products-nav-3.webp" alt="Oreo" /></a>
+              </div>
+            </div>
+            <button type="button" class="arrow" data-arrow-prev></button>
+            <button type="button" class="arrow" data-arrow-next></button>
+          </div>
+          <div class="buttons full">
+            <a href="#" class="button">
+              <span>Подробнее о продуктах</span>
+              <img src="./assets/img/svg/arrow-next.svg" alt="Oreo" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--SECTION HERO IMAGES-->
+      <section class="section section--heroImages">
+        <img src="./assets/img/hero/1.webp" alt="Oreo" class="hero-image active" data-hero-image="1" />
+        <img src="./assets/img/hero/2.webp" alt="Oreo" class="hero-image" data-hero-image="2" />
+        <img src="./assets/img/hero/3.webp" alt="Oreo" class="hero-image" data-hero-image="3" />
       </section>
 
       <!--SECTION FAQ-->
@@ -65,7 +142,7 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Где производится OREO?</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="faq-subtitle" data-faq-answer>OREO для России производится в&nbsp;городе Собинка во&nbsp;Владимирской области</p>
                   <div class="faq-image">
                     <img src="./assets/img/faq/1.webp" alt="Oreo" />
                   </div>
@@ -74,8 +151,10 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Еще один интересный факт</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <div class="faq-image">
+                  <p class="faq-subtitle" data-faq-answer>
+                    Когда было произведено первое ОREO, в&nbsp;1912 году, Уолт Дисней еще не&nbsp;придумал Микки Мауса
+                  </p>
+                  <div class="faq-image medium">
                     <img src="./assets/img/faq/2.webp" alt="Oreo" />
                   </div>
                 </div>
@@ -83,7 +162,7 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Как правильно есть OREO?</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="faq-subtitle" data-faq-answer>Cамый вкусный способ есть OREO: «покрути, лизни и&nbsp;обмакни»</p>
                   <div class="faq-image">
                     <img src="./assets/img/faq/3.webp" alt="Oreo" />
                   </div>
@@ -92,7 +171,7 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Подходит ли&nbsp;oreo для&nbsp;безлактозных диет?</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="faq-subtitle" data-faq-answer>Нет, так как в&nbsp;OREO может содержаться молоко</p>
                   <div class="faq-image">
                     <img src="./assets/img/faq/4.webp" alt="Oreo" />
                   </div>
@@ -101,7 +180,7 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Содержит ЛИ OREO глютен?</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="faq-subtitle" data-faq-answer>Да, так как в&nbsp;рецептуре OREO есть пшеница</p>
                   <div class="faq-image">
                     <img src="./assets/img/faq/5.webp" alt="Oreo" />
                   </div>
@@ -110,7 +189,7 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Где я могу купить разные вкусы Oreo?</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="faq-subtitle" data-faq-answer>В большинстве магазинов и&nbsp;онлайн</p>
                   <div class="faq-image">
                     <img src="./assets/img/faq/6.webp" alt="Oreo" />
                   </div>
@@ -119,8 +198,11 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Интересный <br />факт</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <div class="faq-image">
+                  <p class="faq-subtitle" data-faq-answer>
+                    Если сложить вместе все когда-либо проданные OREO, а&nbsp;это 450 миллиардов штук, они преодолеют расстояние до&nbsp;Луны
+                    и&nbsp;обратно более 5 раз
+                  </p>
+                  <div class="faq-image deep">
                     <img src="./assets/img/faq/7.webp" alt="Oreo" />
                   </div>
                 </div>
@@ -128,7 +210,7 @@
               <div class="swiper-slide">
                 <div class="inner">
                   <h3 class="faq-title">Содержит ли&nbsp;OREO орехи?</h3>
-                  <p class="faq-subtitle" data-faq-answer>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p class="faq-subtitle" data-faq-answer>Нет, так как в&nbsp;OREO может содержаться молоко</p>
                   <div class="faq-image">
                     <img src="./assets/img/faq/8.webp" alt="Oreo" />
                   </div>

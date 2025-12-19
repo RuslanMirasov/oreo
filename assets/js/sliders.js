@@ -101,15 +101,11 @@ export const initSliders = () => {
 
 const onHeroSlideChange = number => {
   if (!number) return;
-  const activeTop = document.querySelector('.dop-image-top.active');
-  const activeBottom = document.querySelector('.dop-image-bottom.active');
-  const targeTop = document.querySelector(`.dop-image-top-${number}`);
-  const targetBottom = document.querySelector(`.dop-image-bottom-${number}`);
+  const activeImage = document.querySelector('.hero-image.active');
+  const targeImage = document.querySelector(`[data-hero-image="${number}"]`);
 
-  activeTop?.classList.remove('active');
-  activeBottom?.classList.remove('active');
-  targeTop?.classList.add('active');
-  targetBottom?.classList.add('active');
+  activeImage?.classList.remove('active');
+  targeImage?.classList.add('active');
 };
 
 export const heroSliderChange = () => {

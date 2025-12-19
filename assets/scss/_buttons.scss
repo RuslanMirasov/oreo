@@ -1,0 +1,162 @@
+.buttons,
+.button {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: none;
+  outline: none;
+  &.full {
+    width: 100%;
+  }
+  &.ta--l {
+    justify-content: flex-start;
+  }
+  &.ta--r {
+    justify-content: flex-end;
+  }
+  &.ta--space {
+    justify-content: space-between;
+  }
+}
+
+.buttons {
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button {
+  overflow: hidden;
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 60px;
+  padding: 14px 20px;
+  background: var(--white);
+  gap: 14px;
+  flex-shrink: 0;
+  span {
+    display: block;
+    position: relative;
+    font-family: var(--oreo);
+    font-size: 22px;
+    line-height: 1;
+    z-index: 3;
+    span.del-in-mobil {
+      display: inline;
+      padding: 0 !important;
+    }
+  }
+  img,
+  svg {
+    position: relative;
+    z-index: 3;
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: var(--gradient);
+  }
+  &:after {
+    transition: opacity 0.3s;
+    background: var(--gradient-invers);
+    opacity: 0;
+    z-index: 2;
+  }
+  @media (hover: hover) {
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &[data-arrow-prev],
+  &[data-arrow-next] {
+    padding: 0;
+    img,
+    svg {
+      position: absolute !important;
+    }
+  }
+
+  &.big {
+    min-height: 80px;
+    min-width: 80px;
+    span {
+      font-size: 40px;
+      padding: 0px 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  &.button--white {
+    &:before,
+    &:after {
+      background: var(--white);
+    }
+    span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .button {
+    &.big {
+      min-height: 65px;
+      min-width: 65px;
+      padding: 10px 12px;
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 4px 12px;
+    gap: 10px;
+    span {
+      font-size: 14px;
+    }
+
+    img,
+    svg {
+      max-width: 20px;
+      height: auto;
+    }
+
+    &[data-arrow-prev],
+    &[data-arrow-next] {
+      padding: 0;
+    }
+
+    &.big {
+      min-height: 46px;
+      min-width: 46px;
+      span {
+        font-size: 22px;
+        padding: 0px 12px;
+        span.del-in-mobil {
+          display: none;
+        }
+      }
+      img,
+      svg {
+        max-width: 28px;
+      }
+    }
+  }
+}

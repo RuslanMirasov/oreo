@@ -12,6 +12,12 @@
   --red: #ff337a;
   --invalid: #ec1d2f;
   --grey: #adb1b3;
+
+  --gradient: linear-gradient(4deg, rgba(255, 51, 224, 0) 0%, rgba(255, 40, 173, 1) 100%),
+    linear-gradient(-8deg, rgba(255, 51, 122, 0) 0%, rgba(255, 174, 202, 1) 100%), var(--red);
+
+  --gradient-invers: linear-gradient(4deg, rgba(255, 40, 173, 1) 0%, rgba(255, 51, 224, 0) 100%),
+    linear-gradient(-8deg, rgba(255, 174, 202, 1) 0%, rgba(255, 51, 122, 0) 100%), var(--red);
 }
 
 @import 'preloader';
@@ -21,8 +27,12 @@
 @import 'reset';
 @import 'swiper';
 @import 'typography';
+@import 'buttons';
 @import 'header';
 @import 'section__hero';
+@import 'section__banner';
+@import 'section__products-navigation';
+@import 'section__heroImages';
 @import 'section__brends';
 @import 'section__faq';
 @import 'footer';

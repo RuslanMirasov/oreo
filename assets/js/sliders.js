@@ -3,6 +3,27 @@ import { registerNamedSwiper } from './goToSlide.js';
 const sliders = document.querySelectorAll('[data-slider]');
 const toBool = s => String(s).toLowerCase() === 'true';
 
+const updateClasses = swiper => {
+  const slides = swiper.slides;
+  const activeIndex = swiper.activeIndex;
+
+  slides.forEach((slide, index) => {
+    slide.classList.remove('swiper-slide-prev-prev', 'swiper-slide-next-next', 'swiper-slide-before', 'swiper-slide-after');
+
+    const diff = index - activeIndex;
+
+    if (diff === -2) {
+      slide.classList.add('swiper-slide-prev-prev');
+    } else if (diff === 2) {
+      slide.classList.add('swiper-slide-next-next');
+    } else if (diff < -2) {
+      slide.classList.add('swiper-slide-before');
+    } else if (diff > 2) {
+      slide.classList.add('swiper-slide-after');
+    }
+  });
+};
+
 export const initSliders = () => {
   if (sliders.length > 0) {
     sliders.forEach(sliderWrapper => {
@@ -27,7 +48,7 @@ export const initSliders = () => {
 
       const options = {
         allowTouchMove: toBool(allowTouchMove),
-        effect,
+        effect: effect === '3d' ? 'coverflow' : effect,
         speed,
         loop,
         centeredSlides: centered,
@@ -88,6 +109,18 @@ export const initSliders = () => {
         };
       }
 
+      if (effect === '3d') {
+        options.watchSlidesProgress = true;
+        options.watchSlidesVisibility = true;
+        options.coverflowEffect = {
+          rotate: 0,
+          scale: 1,
+          depth: 0,
+          stretch: 0,
+          slideShadows: false,
+        };
+      }
+
       const instance = new Swiper(swiper, options);
 
       const rawKey = sliderWrapper.getAttribute('data-slider');
@@ -132,28 +165,9 @@ export const faqSliderChange = () => {
   const DEFAULT_SPEED = faqSlider.params.speed;
   const STEP_SPEED = 150;
 
-  const updateClasses = () => {
-    const slides = faqSlider.slides;
-    const activeIndex = faqSlider.activeIndex;
-
-    slides.forEach((slide, index) => {
-      slide.classList.remove('swiper-slide-prev-prev', 'swiper-slide-next-next', 'swiper-slide-before', 'swiper-slide-after');
-
-      const diff = index - activeIndex;
-
-      if (diff === -2) {
-        slide.classList.add('swiper-slide-prev-prev');
-      } else if (diff === 2) {
-        slide.classList.add('swiper-slide-next-next');
-      } else if (diff < -2) {
-        slide.classList.add('swiper-slide-before');
-      } else if (diff > 2) {
-        slide.classList.add('swiper-slide-after');
-      }
-    });
-  };
-
-  faqSlider.on('slideChange', updateClasses);
+  faqSlider.on('slideChange', () => {
+    updateClasses(faqSlider);
+  });
 
   paginationEl.addEventListener(
     'click',
@@ -218,5 +232,53 @@ export const faqSliderChange = () => {
     isStepping = false;
   });
 
-  updateClasses();
+  updateClasses(faqSlider);
+};
+
+function animateCadr(cookie, from, to) {
+  if (cookie._cadrTimer) {
+    clearInterval(cookie._cadrTimer);
+  }
+
+  cookie._cadrTimer = setInterval(() => {
+    if (from === to) {
+      clearInterval(cookie._cadrTimer);
+      cookie._cadrTimer = null;
+      return;
+    }
+
+    from += from < to ? 1 : -1;
+    cookie.style.setProperty('--cadr', from);
+  }, 40);
+}
+
+function animateCookies(swiper) {
+  swiper.slides.forEach(slide => {
+    const cookie = slide.querySelector('.cookie');
+    if (!cookie) return;
+
+    const styles = getComputedStyle(cookie);
+    let cadr = Math.round(parseFloat(styles.getPropertyValue('--cadr'))) || 0;
+    const target = Math.round(parseFloat(styles.getPropertyValue('--target')));
+
+    if (cadr === target) return;
+
+    animateCadr(cookie, cadr, target);
+  });
+}
+
+export const cookieSliderChange = () => {
+  const swiper = window.swipers?.['3d'];
+  if (!swiper) return;
+
+  const run = swiper => {
+    updateClasses(swiper);
+    animateCookies(swiper);
+  };
+
+  //swiper.on('setTranslate', () => run(swiper));
+  swiper.on('slideChangeTransitionStart', () => run(swiper));
+  swiper.on('progress', () => run(swiper));
+
+  run(swiper);
 };

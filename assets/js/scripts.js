@@ -1,5 +1,5 @@
 import { hidePreloader, initNavigationMenu, fixHeaderOnScroll } from './helpers.js';
-import { initSliders, heroSliderChange, faqSliderChange } from './sliders.js';
+import { initSliders, heroSliderChange, faqSliderChange, cookieSliderChange } from './sliders.js';
 import { popup } from './popup.js';
 
 popup.init();
@@ -16,4 +16,5 @@ setTimeout(() => {
 document.addEventListener('DOMContentLoaded', () => {
   heroSliderChange();
   faqSliderChange();
+  cookieSliderChange();
 });

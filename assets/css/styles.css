@@ -885,10 +885,10 @@ menu {
   --target: 14;
 }
 .swiper-oreo .swiper-slide.swiper-slide-next-next .cookie {
-  transform: translate(-60%, 0%);
+  transform: translate(-80%, 0%);
 }
 .swiper-oreo .swiper-slide.swiper-slide-prev-prev .cookie {
-  transform: translate(60%, 0%);
+  transform: translate(80%, 0%);
 }
 .swiper-oreo .swiper-slide.swiper-slide-after .cookie {
   transform: translate(-120%, 0%);
@@ -958,32 +958,17 @@ menu {
   pointer-events: none;
   z-index: 1;
   margin: 0 auto;
-  margin-bottom: -514px;
-  margin-top: -22%;
-}
-@media (max-width: 1279px) {
-  .section--heroImages {
-    margin-bottom: -450px;
-  }
-}
-@media (max-width: 1023px) {
-  .section--heroImages {
-    margin-bottom: -320px;
-  }
-}
-@media (max-width: 767px) {
-  .section--heroImages {
-    margin-bottom: -190px;
-  }
+  margin-bottom: -22%;
+  margin-top: -10%;
 }
 .section--heroImages .hero-image {
   display: block;
   position: absolute;
-  left: 0px;
+  width: 2560px;
+  height: auto;
+  left: 0%;
   top: 0px;
   transition: opacity 0.6s;
-  width: 100%;
-  height: auto;
   opacity: 0;
 }
 .section--heroImages .hero-image.active {

@@ -249,7 +249,7 @@ function animateCadr(cookie, from, to) {
 
     from += from < to ? 1 : -1;
     cookie.style.setProperty('--cadr', from);
-  }, 100);
+  }, 40);
 }
 
 function animateCookies(swiper) {

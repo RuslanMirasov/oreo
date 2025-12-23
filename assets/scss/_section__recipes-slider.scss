@@ -61,7 +61,7 @@
     }
     &.swiper-slide-prev {
       .cookie {
-        transform: translate(24%, 0%);
+        transform: translate(20%, 0%);
         --target: 4;
       }
     }
@@ -76,7 +76,7 @@
     }
     &.swiper-slide-next {
       .cookie {
-        transform: translate(-24%, 0%);
+        transform: translate(-20%, 0%);
         --target: 10;
       }
     }

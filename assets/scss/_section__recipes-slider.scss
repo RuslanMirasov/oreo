@@ -167,3 +167,32 @@
     white-space: nowrap;
   }
 }
+
+@media (max-width: 767px) {
+  .section--recipes-slider {
+    padding: 600px 0px;
+    margin: -550px 0px;
+  }
+
+  .swiper-oreo {
+    width: 240px;
+    height: 240px;
+    margin: 30px auto 60px auto;
+    &:before {
+      width: 900px;
+      height: 872px;
+    }
+    .cookie {
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+
+    .recipe-title {
+      margin-top: 10px;
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+  }
+}

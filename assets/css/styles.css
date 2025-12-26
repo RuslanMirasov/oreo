@@ -220,6 +220,11 @@ hr.horisontal {
 hr.margin {
   margin: 50px 0px;
 }
+@media (max-width: 767px) {
+  hr.margin {
+    margin: 40px 0px;
+  }
+}
 
 .swiper {
   width: 100%;
@@ -1530,7 +1535,6 @@ hr.margin {
   margin-bottom: 0px;
 }
 
-/* номер шага */
 .step::before {
   display: flex;
   align-items: center;
@@ -1549,19 +1553,39 @@ hr.margin {
   font-size: 40px;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .steps {
-    -moz-column-count: 1;
-         column-count: 1;
-    -moz-column-gap: 0;
-         column-gap: 0;
-  }
-}
 @media (max-width: 1279px) {
   .section--recipes-single-hero:after {
     left: 0%;
     transform: translate(-36%, -49%);
+  }
+  .ingredients {
+    gap: 45px 20px;
+    margin-top: 50px;
+  }
+  .ingredients .ingredient {
+    gap: 16px;
+  }
+  .ingredients .ingredient .ingredient__image {
+    width: 80px;
+    height: 80px;
+  }
+  .ingredients .ingredient p {
+    font-size: 16px;
+  }
+  .ingredients .ingredient p b {
+    font-size: 20px;
+  }
+  .step {
+    padding-left: 70px;
+    padding-top: 18px;
+    margin: 30px 0px;
+    min-height: 50px;
+    font-size: 16px;
+  }
+  .step::before {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
   }
 }
 @media (max-width: 1023px) {
@@ -1603,6 +1627,33 @@ hr.margin {
   .recipe-single .recipe-single__content .time {
     margin: 0 auto;
   }
+  .section--recipes-single {
+    padding-top: 40px;
+  }
+  .ingredients {
+    gap: 20px 30px;
+    margin-top: 40px;
+  }
+  .ingredients .ingredient {
+    gap: 16px;
+  }
+  .ingredients .ingredient.col--4 {
+    width: calc((100% - 30px) / 2);
+  }
+  .ingredients .ingredient.col--2 {
+    width: calc((100% - 30px) / 2);
+  }
+  .ingredients .ingredient br.hide-in-mobil {
+    display: none;
+  }
+  .steps ol {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+  .step {
+    padding-left: 70px;
+    margin: 20px 0px;
+  }
 }
 @media (max-width: 767px) {
   .section--recipes-single-hero:before {
@@ -1638,6 +1689,44 @@ hr.margin {
   }
   .recipe-single .recipe-single__content .time {
     margin: 0 auto;
+  }
+  .steps {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .steps ol {
+    -moz-column-count: 1;
+         column-count: 1;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    background: none;
+  }
+  .step {
+    display: flex;
+    padding-top: 0px;
+    position: relative;
+    min-height: 50px;
+    align-items: flex-start;
+  }
+  .step p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+  }
+  .print-menu {
+    justify-content: center;
+    margin-right: auto;
+  }
+  .ingredients {
+    margin-top: 30px;
+  }
+  .ingredients .ingredient.col--4 {
+    width: 100%;
+  }
+  .ingredients .ingredient.col--2 {
+    width: 100%;
   }
 }
 .section--heroImages {

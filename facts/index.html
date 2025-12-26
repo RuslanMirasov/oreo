@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico" />
+    <meta name="theme-color" content="#0150e9" />
+    <meta name="description" content="Описание сайта" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./../assets/css/styles.min.css" />
+    <title>Интересные факты</title>
+  </head>
+  <body class="body" id="body">
+    <!--PRELOADER-->
+    <div class="preloader" data-preloader>
+      <img src="./../assets/img/preloader.webp" alt="Oreo" />
+    </div>
+
+    <!--HEADER-->
+    <header class="header">
+      <div class="container">
+        <a href="./../" class="logo" aria-label="Oreo">
+          <img src="./../assets/img/svg/oreo.svg" alt="Oreo" width="100" />
+        </a>
+
+        <nav class="navigation">
+          <ul class="menu">
+            <li><a href="./../" class="menu__link">Главная</a></li>
+            <li><a href="./../game" class="menu__link">Игра</a></li>
+            <li><a href="./../products" class="menu__link">Продукты</a></li>
+            <li><a href="./../recipes" class="menu__link">Рецепты</a></li>
+            <li><a href="./../facts" class="menu__link active">Факты</a></li>
+            <li><a href="#" class="menu__link" data-popup-open="brends">Где купить</a></li>
+          </ul>
+        </nav>
+
+        <button class="burger">
+          <span>Меню бургер</span>
+        </button>
+      </div>
+    </header>
+
+    <!--MAIN-->
+    <main class="main" id="main">
+      <!--SECTION HERO-->
+      <section class="section section--hero" data-slider="hero">
+        <div class="container">
+          <div class="swiper hero">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-number="1">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                  <source src="./../assets/video/1-mobil.mp4" type="video/mp4" media="(max-width: 659px)" />
+                  <source src="./../assets/video/1.mp4" type="video/mp4" media="(min-width: 660px)" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--SECTION MARKETS BUTTON-->
+      <section class="section section--recipes-footer">
+        <div class="container">
+          <div class="buttons full">
+            <button type="button" class="button big" data-popup-open="brends">
+              <span>Купить <span class="del-in-mobil">в</span> онлайн<span class="del-in-mobil">-магазинах</span></span>
+              <img src="./../assets/img/svg/arrow.svg" alt="Oreo" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="container">
+        <menu class="footer-menu">
+          <li><a href="tel:88005558000">8-800-555-8000</a></li>
+          <li><span>Звонки по России бесплатно</span></li>
+          <li>
+            <a href="https://contactus.mdlzapps.com/mondelezinternationalcom/contact/ru-RU/" class="underline" target="_blank">Связаться с нами</a>
+          </li>
+        </menu>
+
+        <div class="footer-copy">
+          <address>
+            ООО «Мон’дэлис Русь». Часть группы компаний Mondelēz International. Все&nbsp;права&nbsp;защищены.<br />
+            Адрес производства: Российская Федерация 601203, Владимирская обл., Собинский р-н, г. Собинка, ул. Мира, д. 12
+          </address>
+          <ul>
+            <li>
+              <a href="https://privacy.mondelezinternational.com/ru/ru-RU/privacy-policy/" target="_blank">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="https://privacy.mondelezinternational.com/ru/ru-RU/legal-notices/" target="_blank">Пользовательское соглашение</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-logo">
+          <a href="https://www.mondelezinternational.com/" target="_blank">
+            <img src="./../assets/img/svg/mondelez.svg" alt="mondelezinternational" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!--POPUPS-->
+    <div class="backdrop" data-backdrop>
+      <div class="popup" data-popup>
+        <!--Brends popup-->
+        <div class="popup-content" id="brends">
+          <button class="popup-close" data-popup-close>Закрыть</button>
+          <h2 class="title">ГДЕ КУПИТЬ?</h2>
+          <ul class="brends">
+            <li>
+              <a href="https://5ka.ru/search/?text=oreo" target="_blank">
+                <span class="brend-link-text">www.5ka.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/1.webp" alt="Пятёрочка" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.perekrestok.ru/cat/search?search=oreo" target="_blank">
+                <span class="brend-link-text">www.perekrestok.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/2.webp" alt="Перекрёсток" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.vprok.ru/catalog/search?text=oreo&utm_referrer=https%3A%2F%2Fwww.vprok.ru%2F" target="_blank">
+                <span class="brend-link-text">www.vprok.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/3.webp" alt="Впрок" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.utkonos.ru/search/oreo" target="_blank">
+                <span class="brend-link-text">www.utkonos.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/4.webp" alt="Утконос" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span class="brend-link-text">www.KUPER.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/5.webp" alt="Купер" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://samokat.ru/product/pechene-oreo-228-g?utm_source=product_share" target="_blank">
+                <span class="brend-link-text">www.SAMOKAT.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/6.webp" alt="Самокат" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://market.yandex.ru/search?text=oreo&hid=15714122&hid=16011677&hid=4951523&rs=eJwzylcy5WLJL0rNFzj26CGzEgsHgwALmGSAkBoMWQxVHIYmFhYW5maGDYwLD7F2MTJxMFaxcpzq28--gZHhE6MwB4MEgwKIqzB38UV2hcez1zH9ZYzYq2Pfy-Q3M95-KtMO11D7FUwgFQAJ5SAW&glfilter=7893318%3A14888761"
+                target="_blank"
+              >
+                <span class="brend-link-text">Market.yandex.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/7.webp" alt="Яндекс Маркет" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.ozon.ru/category/pechene-pryaniki-i-vafli-9381/oreo-135984965/?brand_was_predicted=true&category_was_predicted=true&deny_category_prediction=true&from_global=true&text=oreo"
+                target="_blank"
+              >
+                <span class="brend-link-text">www.ozon.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/8.webp" alt="Ozon" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://lenta.com/search/oreo/" target="_blank">
+                <span class="brend-link-text">www.lenta.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/9.webp" alt="Лента" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span class="brend-link-text">www.wildberries.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/10.webp" alt="Wildberries" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://magnit.ru/search?term=oreo" target="_blank">
+                <span class="brend-link-text">www.magnit.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/11.webp" alt="Магнит" />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://lavka.yandex.ru/search?text=oreo" target="_blank">
+                <span class="brend-link-text">lavka.yandex.ru</span>
+                <div class="brend">
+                  <img src="./../assets/img/brends/12.webp" alt="Яндекс Лавка" />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./../assets/js/scripts.js" type="module" defer></script>
+  </body>
+</html>

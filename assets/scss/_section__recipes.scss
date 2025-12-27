@@ -23,10 +23,14 @@
 
 .section--recipes-footer {
   z-index: 1;
-  padding-top: myclamp(220px, 350px, 1440px, 1440px);
-  padding-bottom: myclamp(20px, 90px, 1440px, 1440px);
+  padding-top: 40px;
+  padding-bottom: 90px;
   &:before {
     bottom: 50%;
+  }
+  &.blue-circle {
+    padding-top: myclamp(220px, 350px, 1440px, 1440px);
+    padding-bottom: myclamp(20px, 90px, 1440px, 1440px);
   }
 }
 
@@ -267,8 +271,10 @@
   }
 
   .section--recipes-footer {
-    padding-top: 260px;
-    padding-bottom: 50px;
+    &.blue-circle {
+      padding-top: 260px;
+      padding-bottom: 50px;
+    }
   }
 }
 
@@ -306,8 +312,12 @@
   }
 
   .section--recipes-footer {
-    padding-top: 220px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    &.blue-circle {
+      padding-top: 220px;
+      padding-bottom: 40px;
+    }
   }
 
   .blue-circle:before {

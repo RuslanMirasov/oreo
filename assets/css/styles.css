@@ -686,6 +686,11 @@ hr.margin {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+@media (max-width: 1279px) {
+  .section--hero {
+    padding-top: 80px;
+  }
+}
 @media (max-width: 767px) {
   .section--hero {
     padding-top: 80px;
@@ -1019,11 +1024,15 @@ hr.margin {
 
 .section--recipes-footer {
   z-index: 1;
-  padding-top: clamp(220px, 24.3056vw, 350px);
-  padding-bottom: clamp(20px, 6.25vw, 90px);
+  padding-top: 40px;
+  padding-bottom: 90px;
 }
 .section--recipes-footer:before {
   bottom: 50%;
+}
+.section--recipes-footer.blue-circle {
+  padding-top: clamp(220px, 24.3056vw, 350px);
+  padding-bottom: clamp(20px, 6.25vw, 90px);
 }
 
 .blue-circle:before {
@@ -1243,7 +1252,7 @@ hr.margin {
     max-width: 1024px;
     margin: 0 auto;
   }
-  .section--recipes-footer {
+  .section--recipes-footer.blue-circle {
     padding-top: 260px;
     padding-bottom: 50px;
   }
@@ -1279,6 +1288,10 @@ hr.margin {
     width: 100%;
   }
   .section--recipes-footer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .section--recipes-footer.blue-circle {
     padding-top: 220px;
     padding-bottom: 40px;
   }
@@ -2000,6 +2013,299 @@ hr.margin {
   transform: translate(0%, 65%);
 }
 
+.section--facts {
+  padding: 50px 0px;
+  color: var(--blue-dark);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(0, 1fr);
+  gap: 30px;
+}
+
+.fact {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 30px;
+  background: var(--blue-light);
+  min-height: 260px;
+}
+.fact .title {
+  display: inline-flex;
+  position: relative;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 40px 40px 30px 40px;
+}
+.fact .title:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 120%;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--white);
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(60px);
+}
+.fact p {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding: 24px 40px 40px 40px;
+  font-size: 20px;
+  line-height: 1.2;
+  max-width: 50%;
+}
+.fact hr {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+.fact .fact-image {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.fact.fact--1 {
+  grid-area: 1/2/4/3;
+}
+.fact.fact--1 p {
+  max-width: 100%;
+}
+.fact.fact--2 {
+  grid-area: 1/1/2/2;
+  min-height: 320px;
+}
+.fact.fact--2 .fact-image {
+  max-height: 55%;
+  right: 5%;
+}
+.fact.fact--3 {
+  grid-area: 2/1/3/2;
+  min-height: 320px;
+}
+.fact.fact--3 p {
+  max-width: 45%;
+}
+.fact.fact--3 .fact-image {
+  max-height: 56%;
+  right: 2%;
+}
+.fact.fact--4 {
+  grid-area: 3/1/4/2;
+  min-height: 320px;
+}
+.fact.fact--4 p {
+  max-width: 55%;
+}
+.fact.fact--4 .fact-image {
+  max-height: 90%;
+}
+.fact.fact--5 {
+  grid-area: 4/1/5/3;
+}
+.fact.fact--5 .fact-image {
+  right: 5%;
+}
+.fact.fact--6 {
+  grid-area: 5/1/6/3;
+}
+.fact.fact--7 {
+  grid-area: 6/1/7/3;
+}
+.fact.fact--7 .fact-image {
+  right: 12%;
+}
+.fact.fact--8 {
+  grid-area: 7/1/8/3;
+}
+.fact.fact--8 .fact-image {
+  right: 10%;
+}
+.fact.fact--9 {
+  grid-area: 8/1/9/3;
+}
+.fact.fact--9 .fact-image {
+  right: 5%;
+}
+
+@media (max-width: 1279px) {
+  .section--facts {
+    padding: 0px 0px 30px 0px;
+    margin-top: -20px;
+  }
+  .fact {
+    min-height: 200px;
+  }
+  .fact .title {
+    font-size: 32px;
+    padding: 24px 28px 20px 28px;
+  }
+  .fact .title:before {
+    height: 120px;
+  }
+  .fact p {
+    padding: 20px 28px 28px 28px;
+    font-size: 15px;
+    max-width: 50%;
+  }
+  .fact hr {
+    width: calc(100% - 20px);
+  }
+  .fact.fact--1 .fact-image {
+    max-height: 82%;
+  }
+  .fact.fact--2 {
+    min-height: 250px;
+  }
+  .fact.fact--2 .fact-image {
+    max-height: 65%;
+    right: 3%;
+  }
+  .fact.fact--3 {
+    min-height: 250px;
+  }
+  .fact.fact--3 .fact-image {
+    max-height: 60%;
+    right: 0%;
+  }
+  .fact.fact--4 {
+    min-height: 250px;
+  }
+  .fact.fact--4 p {
+    max-width: 55%;
+  }
+  .fact.fact--4 .fact-image {
+    max-height: 90%;
+  }
+}
+@media (max-width: 1023px) {
+  .fact {
+    border-radius: 18px;
+    min-height: 150px;
+  }
+  .fact .title {
+    font-size: 20px;
+    padding: 22px 20px 10px 20px;
+  }
+  .fact .title:before {
+    opacity: 1;
+    width: 180%;
+    height: 100px;
+  }
+  .fact p {
+    padding: 14px 20px 18px 20px;
+    font-size: 10px;
+    max-width: 50%;
+  }
+  .fact.fact--2 {
+    min-height: 150px;
+  }
+  .fact.fact--2 p {
+    max-width: 136px;
+  }
+  .fact.fact--2 .fact-image {
+    max-height: 55%;
+    right: 12%;
+  }
+  .fact.fact--3 {
+    min-height: 150px;
+  }
+  .fact.fact--3 p {
+    max-width: 120px;
+  }
+  .fact.fact--3 .fact-image {
+    max-height: 58%;
+    right: 8%;
+  }
+  .fact.fact--4 {
+    min-height: 150px;
+  }
+  .fact.fact--4 p {
+    max-width: 150px;
+  }
+  .fact.fact--4 .fact-image {
+    max-height: 85%;
+    right: 10%;
+  }
+  .fact.fact--5 p, .fact.fact--6 p, .fact.fact--7 p, .fact.fact--8 p, .fact.fact--9 p, .fact.fact--10 p {
+    max-width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .section--facts {
+    margin-top: 20px;
+    padding-bottom: 0px;
+  }
+  .facts {
+    grid-template-columns: 1fr;
+  }
+  .fact {
+    grid-area: auto !important;
+    width: 100%;
+    min-height: 184px !important;
+  }
+  .fact.fact--1 p {
+    max-width: 100%;
+  }
+  .fact.fact--1 .fact-image {
+    max-height: auto;
+    right: 0%;
+    width: 100%;
+    position: relative;
+    margin-top: -24px;
+  }
+  .fact.fact--2 .fact-image {
+    max-height: 55%;
+    right: 6%;
+  }
+  .fact.fact--3 .fact-image {
+    max-height: 60%;
+    right: 2%;
+  }
+  .fact.fact--4 .fact-image {
+    max-height: 94%;
+    right: 0%;
+  }
+  .fact.fact--5 .fact-image {
+    max-height: 100%;
+    max-width: 5000px;
+    right: 0%;
+  }
+  .fact.fact--6 p {
+    max-width: 100px;
+  }
+  .fact.fact--6 .fact-image {
+    max-height: 60%;
+    right: -2%;
+  }
+  .fact.fact--7 p, .fact.fact--8 p, .fact.fact--9 p, .fact.fact--10 p {
+    max-width: 180px;
+  }
+  .fact.fact--7 .fact-image {
+    max-height: 65%;
+    right: 2%;
+  }
+  .fact.fact--8 .fact-image {
+    max-height: 65%;
+    right: 2%;
+  }
+  .fact.fact--9 .fact-image {
+    max-height: 58%;
+    right: -5%;
+  }
+  .hide-in-mobil {
+    display: none;
+  }
+}
 .footer {
   width: 100%;
   padding-bottom: 40px;

@@ -315,6 +315,9 @@ hr.margin {
   padding: 20px;
   background: var(--gradient);
 }
+.section-title.mb {
+  margin-bottom: 60px;
+}
 
 .title {
   display: block;
@@ -2014,7 +2017,7 @@ hr.margin {
 }
 
 .section--facts {
-  padding: 50px 0px;
+  padding: 0px 0px 30px 0px;
   color: var(--blue-dark);
 }
 
@@ -2113,7 +2116,8 @@ hr.margin {
   grid-area: 4/1/5/3;
 }
 .fact.fact--5 .fact-image {
-  right: 5%;
+  right: 10%;
+  max-height: 140%;
 }
 .fact.fact--6 {
   grid-area: 5/1/6/3;
@@ -2246,6 +2250,9 @@ hr.margin {
     padding-bottom: 0px;
   }
   .facts {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: 1fr;
   }
   .fact {
@@ -2306,6 +2313,10 @@ hr.margin {
     display: none;
   }
 }
+.section--products {
+  padding-bottom: 60px;
+}
+
 .footer {
   width: 100%;
   padding-bottom: 40px;

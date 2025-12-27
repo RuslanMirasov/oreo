@@ -4,6 +4,9 @@
   text-align: center;
   padding: 20px;
   background: var(--gradient);
+  &.mb {
+    margin-bottom: 60px;
+  }
 }
 
 .title {

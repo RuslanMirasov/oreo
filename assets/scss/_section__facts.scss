@@ -1,5 +1,5 @@
 .section--facts {
-  padding: 50px 0px;
+  padding: 0px 0px 30px 0px;
   color: var(--blue-dark);
 }
 
@@ -101,7 +101,8 @@
   &.fact--5 {
     grid-area: 4 / 1 / 5 / 3;
     .fact-image {
-      right: 5%;
+      right: 10%;
+      max-height: 140%;
     }
   }
   &.fact--6 {
@@ -255,6 +256,9 @@
   }
 
   .facts {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: 1fr;
   }
 

@@ -2604,6 +2604,12 @@ hr.margin {
   gap: 24px;
   margin-top: 60px;
 }
+.harakteristics.jc--space {
+  justify-content: space-between;
+}
+.harakteristics.jc--space .harakteristic-item:nth-child(3) {
+  max-width: 200px;
+}
 .harakteristics .title {
   width: 100%;
 }
@@ -2616,6 +2622,10 @@ hr.margin {
   align-items: center;
   align-content: center;
   gap: 10px;
+}
+.harakteristics .harakteristic-item.w-auto {
+  width: auto;
+  flex: 1;
 }
 .harakteristics .harakteristic-item img {
   height: 92px;
@@ -2764,7 +2774,7 @@ hr.margin {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  padding: 32px 30px 32px 0px;
+  padding: 50px 0px 50px 0px;
   position: relative;
   font-weight: 500;
   font-family: var(--oreo);
@@ -2798,8 +2808,7 @@ hr.margin {
   width: 100%;
   flex-direction: column;
   gap: 30px;
-  padding-bottom: 32px;
-  padding-right: 30px;
+  padding-bottom: 50px;
 }
 .accordeon .answer .answer__content p,
 .accordeon .answer .answer__content li {

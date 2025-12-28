@@ -163,6 +163,14 @@
   align-content: flex-start;
   gap: 24px;
   margin-top: 60px;
+  &.jc--space {
+    justify-content: space-between;
+    .harakteristic-item {
+      &:nth-child(3) {
+        max-width: 200px;
+      }
+    }
+  }
   .title {
     width: 100%;
   }
@@ -176,6 +184,11 @@
     align-items: center;
     align-content: center;
     gap: 10px;
+
+    &.w-auto {
+      width: auto;
+      flex: 1;
+    }
 
     img {
       height: 92px;

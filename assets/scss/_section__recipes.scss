@@ -112,6 +112,11 @@
         img {
           transform: scale(1.1);
         }
+        .product-image {
+          img {
+            transform: scale(1);
+          }
+        }
       }
     }
   }
@@ -169,13 +174,13 @@
     z-index: 9;
     left: 0px;
     top: 0px;
-    transform: translate(0px, 10px);
+    transform: translate(0px, 10%);
     &:nth-child(2) {
-      transform: translate(0px, 20px);
+      transform: translate(0px, 20%);
       z-index: 8;
     }
     &:nth-child(3) {
-      transform: translate(0px, 30px);
+      transform: translate(0px, 30%);
       z-index: 7;
     }
     img {
@@ -210,15 +215,15 @@
   .taste {
     width: 76px;
     height: 76px;
-    li {
-      transform: translate(0px, 8px);
-      &:nth-child(2) {
-        transform: translate(0px, 16px);
-      }
-      &:nth-child(3) {
-        transform: translate(0px, 24px);
-      }
-    }
+    // li {
+    //   transform: translate(0px, 8px);
+    //   &:nth-child(2) {
+    //     transform: translate(0px, 16px);
+    //   }
+    //   &:nth-child(3) {
+    //     transform: translate(0px, 24px);
+    //   }
+    // }
   }
 
   .time {
@@ -312,7 +317,7 @@
   }
 
   .section--recipes-footer {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 20px;
     &.blue-circle {
       padding-top: 220px;

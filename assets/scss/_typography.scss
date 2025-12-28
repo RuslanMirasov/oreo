@@ -6,6 +6,9 @@
   background: var(--gradient);
   &.mb {
     margin-bottom: 60px;
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -17,5 +20,9 @@
 
   &.ta--c {
     text-align: center;
+  }
+
+  &.title--65 {
+    font-size: myclamp(24px, 65px, 1440px, 1440px);
   }
 }

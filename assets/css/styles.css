@@ -336,6 +336,9 @@ hr.margin {
 .title.title--65 {
   font-size: clamp(24px, 4.5139vw, 65px);
 }
+.title.title--20 {
+  font-size: 20px;
+}
 
 .buttons,
 .button {
@@ -2436,6 +2439,8 @@ hr.margin {
   }
 }
 .post {
+  position: relative;
+  overflow: hidden;
   border-radius: 50px;
   padding: 40px 50px;
   color: var(--blue-dark);
@@ -2489,6 +2494,147 @@ hr.margin {
     height: 700px;
     margin: -194px 0px;
   }
+}
+
+.post-gram {
+  display: block;
+  width: 100%;
+}
+.post-gram span {
+  background: var(--white);
+  padding: 8px 20px;
+  color: var(--red);
+  border-radius: 50px;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.post-description {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+}
+.post-description.va--c {
+  align-items: center;
+  align-content: center;
+}
+.post-description .text {
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 25px;
+}
+.post-description .text .kakao {
+  width: 200px;
+  margin-top: 20px;
+}
+.post-description .swiper {
+  width: 56%;
+  flex-shrink: 0;
+  transform: translate(0px, -78px);
+  margin-bottom: -78px;
+  overflow: visible;
+}
+.post-description .swiper:before, .post-description .swiper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url("../img/svg/cap.svg") no-repeat center center/cover;
+}
+.post-description .swiper:before {
+  right: 100%;
+  top: 100%;
+  transform: translate(-14%, -113%) rotate(146deg);
+}
+.post-description .swiper:after {
+  left: 100%;
+  bottom: 100%;
+  transform: translate(-20%, 0%) rotate(-65deg);
+}
+.post-description .swiper .swiper-slide {
+  position: relative;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out 0s;
+}
+.post-description .swiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+}
+.post-description .swiper .swiper-slide img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.post-description .swiper .swiper-slide:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  left: -15px;
+  top: -15px;
+  background: var(--white);
+  border-radius: 20px;
+  transform: translate(0%, 0%) scale(1);
+  z-index: 0;
+  filter: blur(10px);
+}
+
+.harakteristics {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 24px;
+  margin-top: 60px;
+}
+.harakteristics .title {
+  width: 100%;
+}
+.harakteristics .harakteristic-item {
+  display: flex;
+  position: relative;
+  width: calc((100% - 48px) / 3);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+.harakteristics .harakteristic-item img {
+  height: 92px;
+}
+.harakteristics .harakteristic-item img.icon {
+  height: 68px;
+}
+.harakteristics .harakteristic-item p {
+  width: 100%;
+}
+.harakteristics .harakteristic-item strong {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 50px;
+}
+.harakteristics .harakteristic-item strong span {
+  font-size: 30px;
 }
 
 .footer {
@@ -2596,6 +2742,80 @@ hr.margin {
     content: none;
   }
 }
+.accordeons {
+  margin-top: 60px;
+}
+
+.accordeon {
+  display: block;
+  width: 100%;
+  border-bottom: 1px dashed var(--white);
+}
+.accordeon:first-child {
+  border-top: 1px dashed var(--white);
+}
+.accordeon.open .question:after {
+  transform: rotate(180deg);
+}
+.accordeon .question {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 32px 30px 32px 0px;
+  position: relative;
+  font-weight: 500;
+  font-family: var(--oreo);
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.accordeon .question:after {
+  content: "";
+  width: 30px;
+  height: 18px;
+  background: url("../img/svg/arrow-down.svg") no-repeat center center/cover;
+  position: relative;
+  pointer-events: none;
+  transform: rotate(0deg);
+  margin-left: 20px;
+}
+.accordeon .question > * {
+  pointer-events: none;
+}
+.accordeon .answer {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  transition: 0.3s;
+}
+.accordeon .answer .answer__content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 32px;
+  padding-right: 30px;
+}
+.accordeon .answer .answer__content p,
+.accordeon .answer .answer__content li {
+  display: block;
+  position: relative;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.accordeon .answer .answer__content p a,
+.accordeon .answer .answer__content li a {
+  text-decoration: underline;
+}
+.accordeon .answer .answer__content strong {
+  margin-bottom: -20px;
+}
+
 .body.locked {
   overflow-x: hidden;
   overflow-y: hidden;

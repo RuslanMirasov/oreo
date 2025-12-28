@@ -39,6 +39,7 @@ export const initSliders = () => {
         initialSlide = '0,0,0',
         direction = 'horizontal',
         allowTouchMove = 'true',
+        autoHeight = false,
         autoplay = null,
       } = sliderWrapper.dataset;
 
@@ -49,6 +50,7 @@ export const initSliders = () => {
       const options = {
         allowTouchMove: toBool(allowTouchMove),
         effect: effect === '3d' ? 'coverflow' : effect,
+        autoHeight,
         speed,
         loop,
         centeredSlides: centered,

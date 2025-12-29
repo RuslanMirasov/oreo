@@ -251,7 +251,12 @@
     gap: 10px;
 
     .text {
-      padding-right: 115px;
+      padding-right: 0px;
+      p {
+        &:first-child {
+          padding-right: 115px;
+        }
+      }
     }
 
     .swiper {
@@ -301,7 +306,7 @@
     gap: 10px;
 
     &:nth-child(3) {
-      max-width: 250px;
+      max-width: 300px;
     }
 
     &.w-auto {
@@ -339,7 +344,12 @@
     }
     .harakteristic-item {
       &:nth-child(3) {
-        max-width: 200px;
+        max-width: 300px;
+      }
+      &.w-auto {
+        max-width: 100%;
+        width: auto;
+        flex: 1;
       }
       p {
         font-size: 16px;

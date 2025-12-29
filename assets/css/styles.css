@@ -2688,6 +2688,9 @@ hr.margin {
     gap: 10px;
   }
   .post-description .text {
+    padding-right: 0px;
+  }
+  .post-description .text p:first-child {
     padding-right: 115px;
   }
   .post-description .swiper {
@@ -2733,7 +2736,7 @@ hr.margin {
   gap: 10px;
 }
 .harakteristics .harakteristic-item:nth-child(3) {
-  max-width: 250px;
+  max-width: 300px;
 }
 .harakteristics .harakteristic-item.w-auto {
   max-width: 100%;
@@ -2764,7 +2767,12 @@ hr.margin {
     font-size: 16px;
   }
   .harakteristics .harakteristic-item:nth-child(3) {
-    max-width: 200px;
+    max-width: 300px;
+  }
+  .harakteristics .harakteristic-item.w-auto {
+    max-width: 100%;
+    width: auto;
+    flex: 1;
   }
   .harakteristics .harakteristic-item p {
     font-size: 16px;
@@ -3017,6 +3025,11 @@ hr.margin {
 @media (max-width: 1279px) {
   .accordeon .answer .answer__content strong {
     font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .accordeon .answer .answer__content strong {
+    margin-bottom: -10px;
   }
 }
 

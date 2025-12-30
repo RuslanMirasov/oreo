@@ -915,22 +915,22 @@ hr.margin {
   --target: 0;
 }
 .swiper-oreo .swiper-slide.swiper-slide-prev .cookie {
-  transform: translate(20%, 0%);
-  --target: 4;
+  transform: translate(21%, 0%);
+  --target: 7;
 }
 .swiper-oreo .swiper-slide.swiper-slide-active .cookie {
-  --target: 7;
+  --target: 13;
 }
 .swiper-oreo .swiper-slide.swiper-slide-active .cookie img {
   opacity: 1;
   transition: opacity 0.5s ease-out 0.4s;
 }
 .swiper-oreo .swiper-slide.swiper-slide-next .cookie {
-  transform: translate(-20%, 0%);
-  --target: 10;
+  transform: translate(-24%, 2%);
+  --target: 20;
 }
 .swiper-oreo .swiper-slide.swiper-slide-next-next .cookie, .swiper-oreo .swiper-slide.swiper-slide-after .cookie {
-  --target: 14;
+  --target: 28;
 }
 .swiper-oreo .swiper-slide.swiper-slide-next-next .cookie {
   transform: translate(-80%, 0%);
@@ -959,13 +959,13 @@ hr.margin {
 }
 .swiper-oreo .cookie:before {
   content: "";
-  width: 1500%;
+  width: 2900%;
   height: 100%;
   position: absolute;
   left: 0px;
   top: 0px;
   background: url("../img/3d.webp") no-repeat left top/cover;
-  transform: translateX(calc(var(--cadr) * -6.666666%));
+  transform: translateX(calc(var(--cadr) * -3.4482%));
   will-change: transform;
   pointer-events: none;
 }

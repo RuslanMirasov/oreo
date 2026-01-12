@@ -143,6 +143,33 @@ const onHeroSlideChange = number => {
   targeImage?.classList.add('active');
 };
 
+const updateHeroVideoSrc = slideEl => {
+  if (!slideEl) return;
+
+  const video = slideEl.querySelector('video.hero-video');
+  if (!video) return;
+
+  const isMobile = window.matchMedia('(max-width: 659px)').matches;
+  const nextSrc = isMobile ? video.dataset.mobilSrc : video.dataset.src;
+
+  if (!nextSrc) return;
+
+  // ⚠️ ВАЖНО: не перезагружаем, если src тот же
+  if (video.getAttribute('src') === nextSrc) {
+    video.play().catch(() => {});
+    return;
+  }
+
+  // Safari-safe перезапуск
+  video.pause();
+  video.setAttribute('src', nextSrc);
+  video.load();
+
+  video.play().catch(() => {
+    // Safari может заблокировать — это ок
+  });
+};
+
 export const heroSliderChange = () => {
   const heroSlider = window.swipers?.['hero'];
   if (!heroSlider) return;
@@ -154,6 +181,7 @@ export const heroSliderChange = () => {
     if (number) {
       onHeroSlideChange(Number(number));
     }
+    //updateHeroVideoSrc(slideEl);
   });
 };
 

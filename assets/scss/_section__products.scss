@@ -82,6 +82,39 @@
   }
 }
 
+.recipe {
+  @media (hover: hover) {
+    .taste {
+      li {
+        transition: transform 0.3s, opacity 0.3s;
+        transform: translate(0px, 0%);
+        opacity: 0;
+        will-change: transform;
+        &:nth-child(2) {
+          transform: translate(0px, 0%);
+        }
+        &:nth-child(3) {
+          transform: translate(0px, 0%);
+        }
+      }
+    }
+    &:hover {
+      .taste {
+        li {
+          transform: translate(0px, 10%);
+          opacity: 1;
+          &:nth-child(2) {
+            transform: translate(0px, 20%);
+          }
+          &:nth-child(3) {
+            transform: translate(0px, 30%);
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1279px) {
   .section--product-slider {
     .product-text {

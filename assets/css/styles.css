@@ -722,7 +722,8 @@ hr.margin {
   border-radius: 50px;
   margin-top: 20px;
 }
-.hero video {
+.hero video,
+.hero img {
   display: block;
   width: 100%;
   height: 100%;
@@ -2400,6 +2401,31 @@ hr.margin {
   width: 24%;
   height: 28%;
   right: 4.5%;
+}
+
+@media (hover: hover) {
+  .recipe .taste li {
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translate(0px, 0%);
+    opacity: 0;
+    will-change: transform;
+  }
+  .recipe .taste li:nth-child(2) {
+    transform: translate(0px, 0%);
+  }
+  .recipe .taste li:nth-child(3) {
+    transform: translate(0px, 0%);
+  }
+  .recipe:hover .taste li {
+    transform: translate(0px, 10%);
+    opacity: 1;
+  }
+  .recipe:hover .taste li:nth-child(2) {
+    transform: translate(0px, 20%);
+  }
+  .recipe:hover .taste li:nth-child(3) {
+    transform: translate(0px, 30%);
+  }
 }
 
 @media (max-width: 1279px) {

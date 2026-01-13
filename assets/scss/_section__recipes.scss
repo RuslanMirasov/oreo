@@ -330,3 +330,20 @@
     height: 2000px;
   }
 }
+
+.resipe-image {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+}

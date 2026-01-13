@@ -1316,6 +1316,24 @@ hr.margin {
     height: 2000px;
   }
 }
+.resipe-image {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.resipe-image img {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .resipe-image {
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 .section--recipes-single-hero {
   padding: 100px 0px 50px 0px;
 }

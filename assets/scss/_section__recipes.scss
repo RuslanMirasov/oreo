@@ -156,7 +156,7 @@
   width: 94px;
   height: 94px;
   z-index: 2;
-  &:before {
+  &:after {
     content: '';
     display: block;
     position: absolute;
@@ -166,22 +166,23 @@
     top: 0px;
     z-index: 10;
     background: url('../img/taste/0.webp') no-repeat center center/cover;
+    will-change: transform;
   }
   li {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 9;
+    z-index: 3;
     left: 0px;
     top: 0px;
     transform: translate(0px, 10%);
     &:nth-child(2) {
       transform: translate(0px, 20%);
-      z-index: 8;
+      z-index: 2;
     }
     &:nth-child(3) {
       transform: translate(0px, 30%);
-      z-index: 7;
+      z-index: 1;
     }
     img {
       width: 100%;
@@ -215,15 +216,6 @@
   .taste {
     width: 76px;
     height: 76px;
-    // li {
-    //   transform: translate(0px, 8px);
-    //   &:nth-child(2) {
-    //     transform: translate(0px, 16px);
-    //   }
-    //   &:nth-child(3) {
-    //     transform: translate(0px, 24px);
-    //   }
-    // }
   }
 
   .time {

@@ -1464,20 +1464,23 @@ hr.margin {
   margin-left: auto;
 }
 .print-menu li,
-.print-menu a {
+.print-menu a,
+.print-menu button {
   color: var(--white);
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
-.print-menu a {
+.print-menu a,
+.print-menu button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   gap: 10px;
 }
-.print-menu a:hover p {
+.print-menu a:hover p,
+.print-menu button:hover p {
   opacity: 1;
 }
 .print-menu p {

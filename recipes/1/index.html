@@ -143,10 +143,22 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <button id="printBtn" type="button">
                 <img src="./../../assets/img/svg/print.svg" alt="Oreo" />
                 <p>Распечатать</p>
-              </a>
+              </button>
+              <iframe id="printFrame" src="./../../assets/img/recipe/1.pdf" style="display: none"></iframe>
+              <script>
+                const btn = document.getElementById('printBtn');
+                const frame = document.getElementById('printFrame');
+
+                btn.addEventListener('click', () => {
+                  if (frame.contentWindow) {
+                    frame.contentWindow.focus();
+                    frame.contentWindow.print();
+                  }
+                });
+              </script>
             </li>
           </ul>
         </div>

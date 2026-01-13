@@ -126,13 +126,15 @@
   align-content: center;
   margin-left: auto;
   li,
-  a {
+  a,
+  button {
     color: var(--white);
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.01em;
   }
-  a {
+  a,
+  button {
     display: inline-flex;
     justify-content: center;
     align-items: center;

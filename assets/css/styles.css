@@ -169,8 +169,14 @@ body {
   font-size: 20px;
   line-height: 1.4;
   font-weight: 400;
+  zoom: 1;
 }
 
+@media (min-width: 1240px) and (max-width: 1440px) {
+  body {
+    zoom: 0.8;
+  }
+}
 img {
   display: block;
   -o-object-fit: cover;
@@ -242,7 +248,13 @@ menu {
   max-width: 1200px;
   margin: 0 auto;
 }
-@media (max-width: 1239px) {
+@media (min-width: 901px) and (max-width: 1239px) {
+  .container {
+    max-width: 100%;
+    padding: 0px 100px;
+  }
+}
+@media (max-width: 900px) {
   .container {
     max-width: 100%;
     padding: 0px 28px;
@@ -902,11 +914,11 @@ hr.margin {
 }
 
 .section--banner {
-  padding: 40px 0px;
+  padding: 0px 0px 40px 0px;
 }
 @media (max-width: 1023px) {
   .section--banner {
-    padding: 20px 0px;
+    padding: 0px 0px 20px 0px;
   }
 }
 

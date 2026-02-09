@@ -1,4 +1,4 @@
-import { hidePreloader, initNavigationMenu, fixHeaderOnScroll } from './helpers.js';
+import { hidePreloader, initNavigationMenu, fixHeaderOnScroll, initDownloadPdf } from './helpers.js';
 import { initSliders, heroSliderChange, faqSliderChange, cookieSliderChange } from './sliders.js';
 import { initAccordeons } from './accordeon.js';
 import { popup } from './popup.js';
@@ -10,6 +10,7 @@ initNavigationMenu();
 fixHeaderOnScroll();
 initSliders();
 initAccordeons();
+initDownloadPdf();
 
 setTimeout(() => {
   hidePreloader();

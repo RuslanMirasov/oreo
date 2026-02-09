@@ -37,6 +37,13 @@ body {
   font-size: 20px;
   line-height: 1.4;
   font-weight: 400;
+  zoom:1
+}
+
+@media (min-width: 1240px) and (max-width: 1440px) {
+  body {
+    zoom: 0.8;
+  }
 }
 
 img {
@@ -98,7 +105,11 @@ menu {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  @media (max-width: 1239px) {
+  @media (min-width: 901px) and (max-width: 1239px) {
+    max-width: 100%;
+    padding: 0px 100px;
+  }
+  @media (max-width: 900px) {
     max-width: 100%;
     padding: 0px 28px;
   }

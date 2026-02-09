@@ -62,3 +62,32 @@ export const initNavigationMenu = () => {
   if (burger) burger.addEventListener('click', toggleMenu);
   menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
 };
+
+export const initDownloadPdf = () => {
+  const downloadLinks = document.querySelectorAll('[data-download-pdf]');
+
+  if (!downloadLinks.length) return;
+
+  const downloadPdf = e => {
+    e.preventDefault();
+    const linkEl = e.currentTarget;
+    const href = linkEl.dataset.downloadPdf;
+    if (!href) return;
+
+    const filename = href.split('/').pop() || 'file.pdf';
+
+    const a = document.createElement('a');
+    a.href = href;
+    a.download = filename;
+    a.rel = 'noopener';
+    a.style.display = 'none';
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
+  downloadLinks.forEach(link => {
+    link.addEventListener('click', downloadPdf);
+  });
+};

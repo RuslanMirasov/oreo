@@ -160,18 +160,21 @@
                 <img src="./../../assets/img/svg/print.svg" alt="Oreo" />
                 <p>Распечатать</p>
               </button>
-              <!-- <iframe id="printFrame" src="./../../assets/img/recipe/pdf/2.pdf" style="display: none"></iframe> -->
-              <!-- <script>
+              <iframe id="printFrame" style="display: none"></iframe>
+
+              <script>
                 const btn = document.getElementById('printBtn');
                 const frame = document.getElementById('printFrame');
 
                 btn.addEventListener('click', () => {
-                  if (frame.contentWindow) {
+                  frame.src = './../../assets/img/recipe/pdf/2.pdf';
+
+                  frame.onload = () => {
                     frame.contentWindow.focus();
                     frame.contentWindow.print();
-                  }
+                  };
                 });
-              </script> -->
+              </script>
             </li>
           </ul>
         </div>

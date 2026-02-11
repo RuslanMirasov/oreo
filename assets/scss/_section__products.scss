@@ -86,7 +86,9 @@
   @media (hover: hover) {
     .taste {
       li {
-        transition: transform 0.3s, opacity 0.3s;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
         transform: translate(0px, 0%);
         opacity: 0;
         will-change: transform;
@@ -98,7 +100,8 @@
         }
       }
     }
-    &:hover {
+    &:hover,
+    &.freez {
       .taste {
         li {
           transform: translate(0px, 10%);

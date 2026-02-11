@@ -2959,18 +2959,18 @@ hr.margin {
         -ms-transform: translate(0px, 0%);
             transform: translate(0px, 0%);
   }
-  .recipe:hover .taste li {
+  .recipe:hover .taste li, .recipe.freez .taste li {
     -webkit-transform: translate(0px, 10%);
         -ms-transform: translate(0px, 10%);
             transform: translate(0px, 10%);
     opacity: 1;
   }
-  .recipe:hover .taste li:nth-child(2) {
+  .recipe:hover .taste li:nth-child(2), .recipe.freez .taste li:nth-child(2) {
     -webkit-transform: translate(0px, 20%);
         -ms-transform: translate(0px, 20%);
             transform: translate(0px, 20%);
   }
-  .recipe:hover .taste li:nth-child(3) {
+  .recipe:hover .taste li:nth-child(3), .recipe.freez .taste li:nth-child(3) {
     -webkit-transform: translate(0px, 30%);
         -ms-transform: translate(0px, 30%);
             transform: translate(0px, 30%);
